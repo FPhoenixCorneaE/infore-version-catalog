@@ -1,15 +1,15 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    alias(deps.plugins.kotlin.android)
 }
 
 android {
-    compileSdk = 32
+    compileSdk = deps.versions.compileSdk.get().toInt()
 
     defaultConfig {
         applicationId = "com.infore.version.catalog"
-        minSdk = 21
-        targetSdk = 32
+        minSdk = deps.versions.minSdk.get().toInt()
+        targetSdk = deps.versions.targetSdk.get().toInt()
         versionCode = 100
         versionName = "1.0.0"
 
@@ -34,12 +34,12 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.3.0")
-    implementation("com.google.android.material:material:1.4.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
+    implementation(deps.androidx.core.ktx)
+    implementation(deps.androidx.appcompat)
+    implementation(deps.material)
+    implementation(deps.androidx.constraintlayout)
+    testImplementation(deps.test.junit.junit)
+    androidTestImplementation(deps.test.junit.ktx)
+    androidTestImplementation(deps.test.espresso.core)
 }
 

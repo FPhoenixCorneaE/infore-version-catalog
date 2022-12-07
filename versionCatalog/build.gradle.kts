@@ -43,11 +43,16 @@ catalog {
         version("compileSdk", "33")
         version("minSdk", "21")
         version("targetSdk", "33")
+        version("android", "7.2.1")
         version("kotlin", "1.7.20")
 
         // plugin
+        plugin("android-application", "com.android.application").versionRef("android")
+        plugin("android-library", "com.android.library").versionRef("android")
         plugin("kotlin-android", "org.jetbrains.kotlin.android").versionRef("kotlin")
         plugin("kotlin-kapt", "org.jetbrains.kotlin.kapt").versionRef("kotlin")
+        plugin("kotlin-parcelize", "org.jetbrains.kotlin.plugin.parcelize").versionRef("kotlin")
+        plugin("navigation-safeargs", "androidx.navigation.safeargs.kotlin").versionRef("navigation")
 
         // infore
         library("infore-jetpack-mvvm", "com.infore.robot:jetpack-mvvm:1.2.5@aar")
@@ -137,6 +142,7 @@ catalog {
         library("dokit-mc", "io.github.didi.dokit", "dokitx-mc").versionRef("dokit")
         library("dokit-weex", "io.github.didi.dokit", "dokitx-weex").versionRef("dokit")
         library("dokit-no-op", "io.github.didi.dokit", "dokitx-no-op").versionRef("dokit")
+        bundle("dokit", listOf("dokit", "dokit-ft", "dokit-mc", "dokit-weex", "dokit-no-op"))
 
         // bugly
         library("bugly", "com.tencent.bugly:crashreport:4.0.4")
@@ -145,7 +151,7 @@ catalog {
         // easyfloat
         library("easyfloat", "com.github.princekin-f:EasyFloat:2.0.4")
         // powerspinner
-        library("easyfloat", "com.github.skydoves:powerspinner:1.2.3")
+        library("powerspinner", "com.github.skydoves:powerspinner:1.2.3")
         // photoview
         library("photoview", "com.github.chrisbanes:PhotoView:2.3.0")
         // bannerviewpager
@@ -153,8 +159,9 @@ catalog {
 
         // test
         library("test-core-ktx", "androidx.test:core-ktx:1.4.0")
-        library("test-espresso-core", "androidx.test.espresso:espresso-core:3.4.0")
+        library("test-junit-junit", "junit:junit:4.13.2")
         library("test-junit-ktx", "androidx.test.ext:junit-ktx:1.1.3")
+        library("test-espresso-core", "androidx.test.espresso:espresso-core:3.4.0")
     }
 }
 
