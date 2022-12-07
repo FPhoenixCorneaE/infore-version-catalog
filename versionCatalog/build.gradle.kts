@@ -49,6 +49,9 @@ catalog {
         plugin("kotlin-android", "org.jetbrains.kotlin.android").versionRef("kotlin")
         plugin("kotlin-kapt", "org.jetbrains.kotlin.kapt").versionRef("kotlin")
 
+        // infore
+        library("infore-jetpack-mvvm", "com.infore.robot:jetpack-mvvm:1.2.5@aar")
+
         // androidx
         library("androidx-activity-ktx", "androidx.activity", "activity-ktx").version("1.6.1")
         library("androidx-annotation", "androidx.annotation", "annotation").version("1.5.0")
@@ -68,6 +71,11 @@ catalog {
         library("androidx-recyclerview-selection", "androidx.recyclerview", "recyclerview-selection").version("1.1.0")
         library("androidx-startup-runtime", "androidx.startup", "startup-runtime").version("1.1.1")
         library("androidx-swiperefreshlayout", "androidx.swiperefreshlayout", "swiperefreshlayout").version("1.1.0")
+        library("androidx-viewpager2", "androidx.viewpager2", "viewpager2").version("1.0.0")
+        library("androidx-legacy", "androidx.legacy", "legacy-support-v4").version("1.0.0")
+
+        // material
+        library("material", "com.google.android.material", "material").version("1.5.0")
 
         // lifecycle
         version("lifecycle", "2.5.1")
@@ -121,6 +129,27 @@ catalog {
         library("coil", "io.coil-kt", "coil").versionRef("coil")
         library("coil-gif", "io.coil-kt", "coil-gif").versionRef("coil")
         bundle("coil", listOf("coil", "coil-gif"))
+
+        // dokit(https://github.com/didi/DoraemonKit)
+        version("dokit", "3.5.0")
+        library("dokit", "io.github.didi.dokit", "dokit").versionRef("dokit")
+        library("dokit-ft", "io.github.didi.dokit", "dokitx-ft").versionRef("dokit")
+        library("dokit-mc", "io.github.didi.dokit", "dokitx-mc").versionRef("dokit")
+        library("dokit-weex", "io.github.didi.dokit", "dokitx-weex").versionRef("dokit")
+        library("dokit-no-op", "io.github.didi.dokit", "dokitx-no-op").versionRef("dokit")
+
+        // bugly
+        library("bugly", "com.tencent.bugly:crashreport:4.0.4")
+        // androidautosize
+        library("androidautosize", "com.github.JessYanCoding:AndroidAutoSize:v1.2.1")
+        // easyfloat
+        library("easyfloat", "com.github.princekin-f:EasyFloat:2.0.4")
+        // powerspinner
+        library("easyfloat", "com.github.skydoves:powerspinner:1.2.3")
+        // photoview
+        library("photoview", "com.github.chrisbanes:PhotoView:2.3.0")
+        // bannerviewpager
+        library("bannerviewpager", "com.github.zhpanvip:bannerviewpager:3.5.7")
 
         // test
         library("test-core-ktx", "androidx.test:core-ktx:1.4.0")
