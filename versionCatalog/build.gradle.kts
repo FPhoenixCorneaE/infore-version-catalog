@@ -52,10 +52,9 @@ catalog {
         plugin("kotlin-android", "org.jetbrains.kotlin.android").versionRef("kotlin")
         plugin("kotlin-kapt", "org.jetbrains.kotlin.kapt").versionRef("kotlin")
         plugin("kotlin-parcelize", "org.jetbrains.kotlin.plugin.parcelize").versionRef("kotlin")
-        plugin("navigation-safeargs", "androidx.navigation.safeargs.kotlin").versionRef("navigation")
 
         // infore
-        library("infore-jetpack-mvvm", "com.infore.robot:jetpack-mvvm:1.2.5@aar")
+        library("infore-jetpack-mvvm", "com.infore.robot:jetpack-mvvm:1.2.5")
 
         // androidx
         library("androidx-activity-ktx", "androidx.activity", "activity-ktx").version("1.6.1")
@@ -63,7 +62,7 @@ catalog {
         library("androidx-appcompat", "androidx.appcompat", "appcompat").version("1.5.1")
         library("androidx-cardview", "androidx.cardview", "cardview").version("1.0.0")
         library("androidx-constraintlayout", "androidx.constraintlayout", "constraintlayout").version("2.1.4")
-        library("androidx-core-ktx", "androidx.core", "core-ktx").version("1.9.0")
+        library("androidx-core-ktx", "androidx.core", "core-ktx").version("1.7.0")
         version("androidx-datastore", "1.0.0")
         library("androidx-datastore", "androidx.datastore", "datastore").versionRef("androidx-datastore")
         library("androidx-datastore-preferences", "androidx.datastore", "datastore-preferences")
@@ -123,7 +122,7 @@ catalog {
         bundle("coroutines", listOf("kotlinx-coroutines-core", "kotlinx-coroutines-android"))
 
         // room
-        version("room", "2.4.3")
+        version("room", "2.5.0-alpha02")
         library("room-runtime", "androidx.room", "room-runtime").versionRef("room")
         library("room-ktx", "androidx.room", "room-ktx").versionRef("room")
         library("room-compiler", "androidx.room", "room-compiler").versionRef("room")
