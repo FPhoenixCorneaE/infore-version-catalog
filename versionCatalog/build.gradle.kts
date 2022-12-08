@@ -156,6 +156,8 @@ catalog {
         library("photoview", "com.github.chrisbanes:PhotoView:2.3.0")
         // bannerviewpager
         library("bannerviewpager", "com.github.zhpanvip:bannerviewpager:3.5.7")
+        // baserecyclerviewadapterhelper
+        library("baserecyclerviewadapterhelper", "io.github.cymchad:BaseRecyclerViewAdapterHelper:4.0.0-beta02")
 
         // test
         library("test-core-ktx", "androidx.test:core-ktx:1.4.0")
