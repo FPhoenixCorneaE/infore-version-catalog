@@ -40,9 +40,9 @@ catalog {
      * bundle  - 用于声明依赖包
      */
     versionCatalog {
-        version("compileSdk", "33")
+        version("compileSdk", "32")
         version("minSdk", "21")
-        version("targetSdk", "33")
+        version("targetSdk", "32")
         version("android", "7.2.1")
         version("kotlin", "1.7.20")
 
