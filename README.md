@@ -1,7 +1,7 @@
 # Version Catalog
 
 ## AGP 7.0.0以上依赖库统一版本号管理。
-> <font color=red><b>注意:</b></font> 该功能需要把`gradle`文件夹下的`gradle-wrapper.properties`中的`gradle`版本改为 <font color=red>7.4.2</font> 以上，否则无法解析。
+> <font color=red><b>注意:</b></font> 该功能需要把`gradle`文件夹下的`gradle-wrapper.properties`中的`gradle`版本改为 <font color=red>7.4.2</font> 以上，否则无法解析。代码提示支持仅限于`build.gradle.kts`。
 
 ### Version Catalog的特性：
 
