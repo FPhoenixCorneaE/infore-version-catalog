@@ -26,8 +26,15 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    buildFeatures {
+        compose = true
+    }
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+    lint {
+        checkReleaseBuilds = false
+        abortOnError = false
     }
     namespace = "com.infore.version.catalog"
 }
@@ -38,6 +45,12 @@ dependencies {
     implementation(deps.androidx.appcompat)
     implementation(deps.material)
     implementation(deps.androidx.constraintlayout)
+    // compose
+    debugImplementation(deps.androidx.compose.ui.tooling)
+    implementation(deps.bundles.compose)
+    implementation(deps.androidx.activity.compose)
+    implementation(deps.androidx.lifecycle.viewmodel.compose)
+
     testImplementation(deps.test.junit.junit)
     androidTestImplementation(deps.test.junit.ktx)
     androidTestImplementation(deps.test.espresso.core)

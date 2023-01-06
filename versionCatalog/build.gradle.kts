@@ -44,7 +44,7 @@ catalog {
         version("minSdk", "21")
         version("targetSdk", "32")
         version("android", "7.2.1")
-        version("kotlin", "1.7.20")
+        version("kotlin", "1.7.0")
 
         // plugin
         plugin("android-application", "com.android.application").versionRef("android")
@@ -133,6 +133,28 @@ catalog {
         library("coil", "io.coil-kt", "coil").versionRef("coil")
         library("coil-gif", "io.coil-kt", "coil-gif").versionRef("coil")
         bundle("coil", listOf("coil", "coil-gif"))
+
+        // compose
+        version("compose", "1.2.0")
+        library("androidx-compose-animation", "androidx.compose.animation", "animation").versionRef("compose")
+        library("androidx-compose-foundation", "androidx.compose.foundation", "foundation").versionRef("compose")
+        library("androidx-compose-material", "androidx.compose.material", "material").versionRef("compose")
+        library("androidx-compose-ui", "androidx.compose.ui", "ui").versionRef("compose")
+        library("androidx-compose-ui-tooling", "androidx.compose.ui", "ui-tooling").versionRef("compose")
+        library("androidx-compose-ui-tooling-preview", "androidx.compose.ui", "ui-tooling-preview")
+            .versionRef("compose")
+        library("androidx-compose-runtime-livedata", "androidx.compose.runtime", "runtime-livedata")
+            .versionRef("compose")
+        bundle("compose", listOf(
+            "androidx-compose-animation",
+            "androidx-compose-foundation",
+            "androidx-compose-material",
+            "androidx-compose-ui",
+            "androidx-compose-ui-tooling-preview",
+            "androidx-compose-runtime-livedata",
+        ))
+        library("androidx-activity-compose", "androidx.activity:activity-compose:1.5.1")
+        library("androidx-lifecycle-viewmodel-compose", "androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1")
 
         // dokit(https://github.com/didi/DoraemonKit)
         version("dokit", "3.5.0")

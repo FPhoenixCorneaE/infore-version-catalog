@@ -19,7 +19,7 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("deps") {
-            from("com.infore.robot:version-catalog:1.1.2")
+            from("com.infore.robot:version-catalog:1.1.8")
         }
     }
 }
